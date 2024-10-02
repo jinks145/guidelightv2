@@ -1,0 +1,17 @@
+.git
+.DS_Store
+airflow_settings.yaml
+__pycache__/
+astro
+.venv
+airflow-webserver.pid
+webserver_config.py
+airflow.cfg
+airflow.db
+results/
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
+config.bat
+node_modules
