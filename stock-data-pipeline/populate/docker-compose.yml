@@ -1,0 +1,19 @@
+
+
+services:
+  scraper:
+    image: brad314/populate:v0.0.9
+    ports:
+      - "4040:4040"  # The port format should be correct (mapping port 4040 on host to 4040 in the container)
+    volumes:
+      - "./results:/opt/spark-apps/results"
+    entrypoint: "spark-submit populate-all.jar"
+    
+  postgres:
+    image: postgres:16
+    ports:
+      - "5433:5432"  # Correct indentation and port mapping
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword  # Environment variables should be under `environment` key
+      POSTGRES_DB: stockoptionsdb
